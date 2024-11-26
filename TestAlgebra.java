@@ -11,9 +11,9 @@ public class TestAlgebra {
         testMinus();
         testTimes();
         testPow();
-        // testDiv();
-        // testMod();
-        // testSqrt();
+        testDiv();
+        testMod();
+        testSqrt();
         testForbiddenOperators();
 
         System.out.println("\nTotal tests: " + totalTests);
@@ -133,93 +133,93 @@ public class TestAlgebra {
         return passed;
     }
 
-    // private static int testDiv() {
-    // System.out.println("\nTesting division operations:");
-    // totalTests += 6;
+    private static int testDiv() {
+    System.out.println("\nTesting division operations:");
+    totalTests += 6;
 
-    // boolean test1 = Algebra.div(12, 3) == 4;
-    // System.out.println("Test 1 (basic division): " + (test1 ? "PASS" : "FAIL"));
+    boolean test1 = Algebra.div(12, 3) == 4;
+    System.out.println("Test 1 (basic division): " + (test1 ? "PASS" : "FAIL"));
 
-    // boolean test2 = Algebra.div(25, 7) == 3;
-    // System.out.println("Test 2 (integer division): " + (test2 ? "PASS" :
-    // "FAIL"));
+    boolean test2 = Algebra.div(25, 7) == 3;
+    System.out.println("Test 2 (integer division): " + (test2 ? "PASS" :
+    "FAIL"));
 
-    // boolean test3 = Algebra.div(0, 5) == 0;
-    // System.out.println("Test 3 (zero dividend): " + (test3 ? "PASS" : "FAIL"));
+    boolean test3 = Algebra.div(0, 5) == 0;
+    System.out.println("Test 3 (zero dividend): " + (test3 ? "PASS" : "FAIL"));
 
-    // boolean test4 = Algebra.div(100, 10) == 10;
-    // System.out.println("Test 4 (large numbers): " + (test4 ? "PASS" : "FAIL"));
+    boolean test4 = Algebra.div(100, 10) == 10;
+    System.out.println("Test 4 (large numbers): " + (test4 ? "PASS" : "FAIL"));
 
-    // boolean test5 = Algebra.div(-15, 3) == -5;
-    // System.out.println("Test 5 (negative dividend): " + (test5 ? "PASS" :
-    // "FAIL"));
+    boolean test5 = Algebra.div(-15, 3) == -5;
+    System.out.println("Test 5 (negative dividend): " + (test5 ? "PASS" :
+    "FAIL"));
 
-    // boolean test6 = Algebra.div(-15, -3) == 5;
-    // System.out.println("Test 6 (negative numbers): " + (test6 ? "PASS" :
-    // "FAIL"));
+    boolean test6 = Algebra.div(-15, -3) == 5;
+    System.out.println("Test 6 (negative numbers): " + (test6 ? "PASS" :
+    "FAIL"));
 
-    // int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
-    // (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
-    // passedTests += passed;
-    // return passed;
-    // }
+    int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
+    (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
+    passedTests += passed;
+    return passed;
+    }
 
-    // private static int testMod() {
-    // System.out.println("\nTesting modulo operations:");
-    // totalTests += 6;
+    private static int testMod() {
+    System.out.println("\nTesting modulo operations:");
+    totalTests += 6;
 
-    // boolean test1 = Algebra.mod(25, 7) == 4;
-    // System.out.println("Test 1 (basic modulo): " + (test1 ? "PASS" : "FAIL"));
+    boolean test1 = Algebra.mod(25, 7) == 4;
+    System.out.println("Test 1 (basic modulo): " + (test1 ? "PASS" : "FAIL"));
 
-    // boolean test2 = Algebra.mod(120, 6) == 0;
-    // System.out.println("Test 2 (no remainder): " + (test2 ? "PASS" : "FAIL"));
+    boolean test2 = Algebra.mod(120, 6) == 0;
+    System.out.println("Test 2 (no remainder): " + (test2 ? "PASS" : "FAIL"));
 
-    // boolean test3 = Algebra.mod(0, 5) == 0;
-    // System.out.println("Test 3 (zero dividend): " + (test3 ? "PASS" : "FAIL"));
+    boolean test3 = Algebra.mod(0, 5) == 0;
+    System.out.println("Test 3 (zero dividend): " + (test3 ? "PASS" : "FAIL"));
 
-    // boolean test4 = Algebra.mod(7, 3) == 1;
-    // System.out.println("Test 4 (small numbers): " + (test4 ? "PASS" : "FAIL"));
+    boolean test4 = Algebra.mod(7, 3) == 1;
+    System.out.println("Test 4 (small numbers): " + (test4 ? "PASS" : "FAIL"));
 
-    // boolean test5 = Algebra.mod(17, 5) == 2;
-    // System.out.println("Test 5 (larger numbers): " + (test5 ? "PASS" : "FAIL"));
+    boolean test5 = Algebra.mod(17, 5) == 2;
+    System.out.println("Test 5 (larger numbers): " + (test5 ? "PASS" : "FAIL"));
 
-    // boolean test6 = Algebra.mod(100, 10) == 0;
-    // System.out.println("Test 6 (divisible): " + (test6 ? "PASS" : "FAIL"));
+    boolean test6 = Algebra.mod(100, 10) == 0;
+    System.out.println("Test 6 (divisible): " + (test6 ? "PASS" : "FAIL"));
 
-    // int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
-    // (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
-    // passedTests += passed;
-    // return passed;
-    // }
+    int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
+    (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
+    passedTests += passed;
+    return passed;
+    }
 
-    // private static int testSqrt() {
-    // System.out.println("\nTesting square root operations:");
-    // totalTests += 6;
+    private static int testSqrt() {
+    System.out.println("\nTesting square root operations:");
+    totalTests += 6;
 
-    // boolean test1 = Algebra.sqrt(36) == 6;
-    // System.out.println("Test 1 (perfect square): " + (test1 ? "PASS" : "FAIL"));
+    boolean test1 = Algebra.sqrt(36) == 6;
+    System.out.println("Test 1 (perfect square): " + (test1 ? "PASS" : "FAIL"));
 
-    // boolean test2 = Algebra.sqrt(0) == 0;
-    // System.out.println("Test 2 (zero): " + (test2 ? "PASS" : "FAIL"));
+    boolean test2 = Algebra.sqrt(0) == 0;
+    System.out.println("Test 2 (zero): " + (test2 ? "PASS" : "FAIL"));
 
-    // boolean test3 = Algebra.sqrt(1) == 1;
-    // System.out.println("Test 3 (one): " + (test3 ? "PASS" : "FAIL"));
+    boolean test3 = Algebra.sqrt(1) == 1;
+    System.out.println("Test 3 (one): " + (test3 ? "PASS" : "FAIL"));
 
-    // boolean test4 = Algebra.sqrt(263169) == 513;
-    // System.out.println("Test 4 (large perfect square): " + (test4 ? "PASS" :
-    // "FAIL"));
+    boolean test4 = Algebra.sqrt(263169) == 513;
+    System.out.println("Test 4 (large perfect square): " + (test4 ? "PASS" :
+    "FAIL"));
 
-    // boolean test5 = Algebra.sqrt(76123) == 275;
-    // System.out.println("Test 5 (floor value): " + (test5 ? "PASS" : "FAIL"));
+    boolean test5 = Algebra.sqrt(76123) == 275;
+    System.out.println("Test 5 (floor value): " + (test5 ? "PASS" : "FAIL"));
 
-    // boolean test6 = Algebra.sqrt(10000) == 100;
-    // System.out.println("Test 6 (power of 10): " + (test6 ? "PASS" : "FAIL"));
+    boolean test6 = Algebra.sqrt(10000) == 100;
+    System.out.println("Test 6 (power of 10): " + (test6 ? "PASS" : "FAIL"));
 
-    // int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
-    // (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
-    // passedTests += passed;
-    // return passed;
-    // }
+    int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) +
+    (test4 ? 1 : 0) + (test5 ? 1 : 0) + (test6 ? 1 : 0);
+    passedTests += passed;
+    return passed;
+    }
 
     private static int testForbiddenOperators() {
         System.out.println("\nTesting forbidden operators:");
