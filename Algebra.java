@@ -8,7 +8,7 @@ import java.lang.reflect.Array;
 public class Algebra {
 	public static void main(String args[]) {
 		// Tests some of the operations
-		System.out.println(plus(-5, -3)); // 2 + 3
+		System.out.println(plus(-5, 1)); // 2 + 3
 		// System.out.println(minus(7, 2)); // 7 - 2
 		// System.out.println(minus(2, 7)); // 2 - 7
 		// System.out.println(times(3, 4)); // 3 * 4
@@ -29,55 +29,81 @@ public class Algebra {
 	public static int plus(int x1, int x2) {
 		// Replace the following statement with your code
 		int sum = 0;
-		if (x1 > x2) {
-			for (int i = 0; i < x1; i++) {
-				sum++;
-				System.out.println(sum);
+		if (x1 < 0 && x2 < 0) {
+			if (x1 < x2) {
+				sum = x2;
+				for (int i = 0; i > x1; i--) {
+					sum += -1;
+				}
 			}
-			sum += x2;
-
-		} else {
-			for (int i = 0; i < x2; i++) {
-				sum++;
+			if (x2 < x1) {
+				sum = x1;
+				for (int i = 0; i > x2; i--) {
+					sum += -1;
+				}
 			}
-			sum += x1;
+			if (x1 == x2) {
+				sum = x1;
+				for (int i = 0; i > x2; i--) {
+					sum += -1;
+				}
+			}
 		}
+		if (x1 > x2) {
+			sum = x2;
+			for (int i = 0; i < x1; i++) {
+				sum += 1;
+			}
+		}
+		if (x2 > x1) {
+			sum = x1;
+			for (int i = 0; i < x2; i++) {
+				sum += 1;
+			}
+		}
+		if (x1 == x2) {
+			sum = x1;
+			for (int i = 0; i < x2; i++) {
+				sum += 1;
+			}
+		}
+
 		return sum;
 	}
 
 	// // Returns x1 - x2
 	// public static int minus(int x1, int x2) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 
 	// // Returns x1 * x2
 	// public static int times(int x1, int x2) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 
 	// // Returns x^n (for n >= 0)
 	// public static int pow(int x, int n) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 
 	// // Returns the integer part of x1 / x2
 	// public static int div(int x1, int x2) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 
 	// // Returns x1 % x2
 	// public static int mod(int x1, int x2) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 
 	// // Returns the integer part of sqrt(x)
 	// public static int sqrt(int x) {
-	// 	// Replace the following statement with your code
-	// 	return 0;
+	// // Replace the following statement with your code
+	// return 0;
 	// }
 }
