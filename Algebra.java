@@ -178,13 +178,21 @@ public class Algebra {
 
 	// Returns x1 % x2
 	public static int mod(int x1, int x2) {
-	// Replace the following statement with your code
-	return 0;
+		int quotient = div(x1, x2);
+		
+		int product = times(quotient, x2);
+		
+		int remainder = minus(x1, product);
+		
+		return remainder;
 	}
 
 	// Returns the integer part of sqrt(x)
 	public static int sqrt(int x) {
-	// Replace the following statement with your code
-	return 0;
-	}
+        int result = 0;
+		while (times(result, result) <= x) {
+            result++;
+        }
+        return minus(result, 1);
+    }
 }
