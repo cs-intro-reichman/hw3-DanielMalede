@@ -153,8 +153,27 @@ public class Algebra {
 
 	// Returns the integer part of x1 / x2
 	public static int div(int x1, int x2) {
-	// Replace the following statement with your code
-	return 0;
+		int quotient = 0;
+	
+		if (x2 == 0) {
+			return 0;
+		}
+	
+		if (x1 == 0) {
+			return quotient;
+		}
+	
+		boolean isNegativeResult = (x1 < 0 && x2 > 0) || (x1 > 0 && x2 < 0);
+	
+		x1 = x1 < 0 ? -x1 : x1;
+		x2 = x2 < 0 ? -x2 : x2;
+	
+		while (x1 >= x2) {
+			x1 = minus(x1, x2);
+			quotient++;
+		}
+	
+		return isNegativeResult ? -quotient : quotient;
 	}
 
 	// Returns x1 % x2

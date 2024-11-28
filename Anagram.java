@@ -29,6 +29,17 @@ public class Anagram {
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
 		// Replace the following statement with your code
+		int checkTrue = 0;
+		for (int i = 0; i < str1.length(); i++) {
+			for (int j = 0; j < str2.length(); j++) {
+                if (str1.charAt(i) == str2.charAt(j)) {
+                    checkTrue++;
+                }
+            }
+		}
+		if (checkTrue == str1.length()) {
+			return true;
+		}
 		return false;
 	}
 	   
